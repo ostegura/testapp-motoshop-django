@@ -1,0 +1,7 @@
+{% extends "mainApp/wrapper.html" %}
+
+{% block content %}
+	{% for pos in object_list %}
+		<a href="/shop/{{pos.name}}"><h5>{{pos.name}}</h5></a>
+	{% endfor %}
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>SS88 Motoshop</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+	<div class="jumbotron">
+	    <div class="container">
+	      <h1>{% include "mainApp/includes/some_html.html" %}</h1>
+	      <p>
+	        <a href="/" class="btn btn-success btn-lg">Main page!</a>
+	        <a href="/contact" class="btn btn-info btn-lg">Contact us &raquo;</a>
+	        <a href="/shop" class="btn btn-primary btn-lg">Shop-content &raquo;</a>
+	      </p>
+	      {% block content %}
+	      {% endblock %}
+	    </div>
+  </div>
+  <div class="container">
+    <img src="{% static 'mainApp/images/banner1.jpg' %}" class="img-thumbnail">
+    <hr>
+    &copy; All rights reserved 2018
+  </div>
+</body>
+</html>
